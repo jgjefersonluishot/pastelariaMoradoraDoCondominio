@@ -25,3 +25,14 @@ def fazer_pedito():
     print("\nSabores disponiveis: ")
     for i, sabor in enumerate(sabores, start=1):
         print(f"{i}. {sabor}")
+
+    escolha = int(input("\nEscolha o número do sabor: "))
+    if 1 <= escolha <=len(sabores):
+        sabor_escolhido = sabores[escolha-1]
+    else:
+        print("⚠️ Opção inválida! Pedido cancelado.")
+        return
+
+    quantidade =int(input("Quantidade de pastéis: "))
+
+    # Calcula valor total.
