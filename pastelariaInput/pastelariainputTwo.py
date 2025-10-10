@@ -4,7 +4,7 @@ from datetime import datetime
 from pastelariaInput.pastelariaInputOne import PRECO_PASTEL
 
 # Configura a moeda brasileira
-locale.setlocale(locale.LC_ALL,"pt_BR.UTF=8")
+locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
 
 # Preço do pastel
 PRECO_PASTEL=3.50
@@ -35,4 +35,25 @@ def fazer_pedito():
 
     quantidade =int(input("Quantidade de pastéis: "))
 
-    # Calcula valor total.
+    # Calcula valor total
+    valor_total = quantidade * PRECO_PASTEL
+    valor_formatado = locale.currency(valor_total, grouping=True)
+
+    # Data e hora do pedido
+    agora = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+
+    print("\n=============== RESUMO DO PEDIDO =================")
+    print(f"Data e Hora: {agora}")
+    print(f"Atendente: {atendente}")
+    print("-----------------------------------------------------")
+    print(f"Cliente: {nome}")
+    print(f"WhatsApp: {whatsapp}")
+    print(f"Endereço: {endereco}")
+    print(f"Sabor escolhido: {sabor_escolhido}")
+    print(f"Quantidade: {quantidade}")
+    print(f"Valor total: {valor_formatado}")
+
+
+
+
+
