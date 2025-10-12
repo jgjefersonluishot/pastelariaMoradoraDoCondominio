@@ -52,6 +52,18 @@ def fazer_pedito():
     print(f"Sabor escolhido: {sabor_escolhido}")
     print(f"Quantidade: {quantidade}")
     print(f"Valor total: {valor_formatado}")
+    print("=====================================================")
+
+def menu():
+    while True:
+        print("=====================================================")
+        print("    Bem vindo Pastelaira da Moradora do Condominio   ")
+        print("=====================================================")
+        print("1 - Fazer pedido")
+        print("2 - Sair")
+
+
+
 
 
 
