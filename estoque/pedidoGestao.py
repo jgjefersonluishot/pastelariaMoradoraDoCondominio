@@ -43,5 +43,18 @@ def escolher_pagamento():
         print("⚠️ Opção inválida. Usando Pix.")
         return "Pix (pasteismoradoradocondominio@gmail.com)"
 
+def mostrar_estoque():
+    print("\n========== ESTOQUE DISPONÍVEL ==========")
+    for produto, dados in ESTOQUE.items():
+        print(f"{produto}: {dados['quantidade']} un. | {locale.currency(dados['preco'], grouping=True)} cada")
+    print("========================================\n")
+
+
+
 print("sem bug até o momento")
+
+
+
+
+
 
