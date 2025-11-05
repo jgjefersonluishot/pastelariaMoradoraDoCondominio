@@ -16,3 +16,12 @@ BEBIDAS = {
     "Suco Laranja 500ml": 6.00,
     "Suco Uva 500ml": 6.00
 }
+
+# Sabores de pastel
+SABORES = [
+    "Carne",
+    "Frango",
+    "Queijo",
+    "Presunto e Queijo",
+    "Mumu (Doce de leite)"
+]
