@@ -128,7 +128,26 @@ def fazer_pedido():
         else:
             print("⚠️ Opção inválida, tente novamente.")
         
-        
+  
+def menu():
+    while True:
+        print("======================================")
+        print("      BEM-VINDO AO PASTÉIS DA MORADORA")
+        print("======================================")
+        print("1 - Fazer pedido")
+        print("2 - Sair")
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            fazer_pedido()
+        elif opcao == "2":
+            print("\nObrigado pela preferência! Volte sempre!\n")
+            break
+        else:
+            print("\n⚠️ Opção inválida, tente novamente.\n")
+
+if __name__ == "__main__":
+    menu()      
         
         
         
