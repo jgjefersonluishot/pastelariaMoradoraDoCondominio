@@ -18,3 +18,18 @@ estoque = {
         "Suco Uva 500ml": 5
     }
 }
+
+# Preços
+precos = {
+    "pastel": 3.50,
+    "bebidas": {
+        "Coca-Cola lata": 6.00,
+        "Guaraná lata": 5.00,
+        "Fanta Laranja lata": 5.00,
+        "Fanta Uva lata": 5.00,
+        "Suco Laranja 500ml": 7.00,
+        "Suco Uva 500ml": 7.00
+    }
+}
+
+
