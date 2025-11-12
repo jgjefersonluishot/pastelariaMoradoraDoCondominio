@@ -101,4 +101,21 @@ def registrar_pedido():
     total = 0
     itens = []
 
+    # Escolher pastéis
+    while True:
+        sabor = escolher_opcao(list(estoque["pasteis"].keys()), "\nSabores de pastéis disponíveis:")
+        qtd = validar_inteiro(f"Quantos pastéis de {sabor}? ")
+        
+        if qtd <= estoque["pasteis"][sabor]:
+            estoque["pasteis"][sabor] -= qtd
+            valor = qtd * precos["pastel"]
+            total += valor
+            itens.append((sabor, qtd, valor))
+        else:
+            print(f"⚠️ Estoque insuficiente! Temos apenas {estoque['pasteis'][sabor]}.")
 
+        mais = input("Deseja adicionar outro pastel? (s/n): ").strip().lower()
+        if mais != "s":
+            break
+            
+            
