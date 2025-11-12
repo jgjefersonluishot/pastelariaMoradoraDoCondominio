@@ -118,4 +118,21 @@ def registrar_pedido():
         if mais != "s":
             break
             
+                # Escolher bebidas
+    while True:
+        escolha_bebida = input("Deseja adicionar bebidas? (s/n): ").strip().lower()
+        if escolha_bebida == "s":
+            bebida = escolher_opcao(list(estoque["bebidas"].keys()), "\nBebidas disponíveis:")
+            qtd_bebida = validar_inteiro(f"Quantas unidades de {bebida}? ")
+
+            if qtd_bebida <= estoque["bebidas"][bebida]:
+                estoque["bebidas"][bebida] -= qtd_bebida
+                valor = qtd_bebida * precos["bebidas"][bebida]
+                total += valor
+                itens.append((bebida, qtd_bebida, valor))
+            else:
+                print(f"⚠️ Estoque insuficiente! Temos apenas {estoque['bebidas'][bebida]}.")
+        else:
+            break
+            
             
