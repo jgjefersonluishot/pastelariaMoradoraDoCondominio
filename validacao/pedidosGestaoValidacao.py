@@ -136,3 +136,31 @@ def registrar_pedido():
             break
             
             
+# Forma de pagamento
+    pagamento = escolher_pagamento()
+
+    # Data, hora e atendente
+    agora = datetime.datetime.now()
+    atendente = "Atendente Maria"
+
+    # Resumo
+    print("\n=== RESUMO DO PEDIDO ===")
+    print(f"Cliente: {cliente}")
+    print(f"WhatsApp: {whatsapp}")
+    print(f"Endereço: {logradouro} {endereco}, {numero}")
+    if complemento:
+        print(f"Complemento: {complemento}")
+    if bloco:
+        print(f"Bloco: {bloco}")
+    print(f"Bairro: {bairro}")
+    print(f"Cidade: {cidade}")
+    print(f"Data: {agora.strftime('%d/%m/%Y %H:%M:%S')}")
+    print(f"Atendente: {atendente}\n")
+
+    for item in itens:
+        print(f"{item[1]}x {item[0]} - R$ {item[2]:.2f}")
+    print(f"\nTotal: R$ {total:.2f}")
+    print(f"Forma de pagamento: {pagamento}")
+    print("=========================================")
+
+
