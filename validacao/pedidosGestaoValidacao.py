@@ -163,4 +163,27 @@ def registrar_pedido():
     print(f"Forma de pagamento: {pagamento}")
     print("=========================================")
 
+# Programa principal
+while True:
+    print("\n===== PASTELARIA DO CONDOMÍNIO =====")
+    print("1. Fazer pedido")
+    print("2. Ver estoque")
+    print("3. Sair")
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        registrar_pedido()
+    elif opcao == "2":
+        print("\n=== ESTOQUE ATUAL ===")
+        print("Pastéis:")
+        for sabor, qtd in estoque["pasteis"].items():
+            print(f" - {sabor}: {qtd}")
+        print("\nBebidas:")
+        for bebida, qtd in estoque["bebidas"].items():
+            print(f" - {bebida}: {qtd}")
+    elif opcao == "3":
+        print("Encerrando sistema. Até logo!")
+        break
+    else:
+        print("⚠️ Opção inválida!")
 
