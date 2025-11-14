@@ -19,3 +19,26 @@ ESTOQUE = {
     "Suco Uva 500ml": {"preco": 6.00, "quantidade": 10}
 }
 
+# Registro do movimento diário
+MOVIMENTO = []
+
+def escolher_pagamento():
+    print("\nFormas de pagamento disponíveis:")
+    print("1 - Cartão Crédito (Visa/Master/Elo)")
+    print("2 - Cartão Débito (Visa/Master/Elo)")
+    print("3 - Pix (chave: pasteismoradoradocondominio@gmail.com)")
+
+    opcao = input("Escolha a forma de pagamento: ")
+    if opcao == "1":
+        return "Cartão de Crédito"
+    elif opcao == "2":
+        return "Cartão de Débito"
+    elif opcao == "3":
+        return "Pix (pasteismoradoradocondominio@gmail.com)"
+    else:
+        print("⚠️ Opção inválida. Usando Pix.")
+        return "Pix (pasteismoradoradocondominio@gmail.com)"
+        
+        
+        
+        
